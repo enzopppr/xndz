@@ -1,13 +1,15 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Teste seu código HTML</title>
     <meta name="Author" content="Fábio Borges de Oliveira">
-<head>
-<body bgcolor=#CCCCCC>
+</head>
+<body bgcolor="#CCCCCC">
 	<center>
 	<form>
 	    <br>
-		<textarea name="fonte" cols=70 rows=20>
+		<textarea name="fonte" cols="70" rows="20">
 			<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -697,10 +699,15 @@
   </script>
 </body>
 </html>
-
 		</textarea>
 		<br><br>
     	<input type="button" value=" Testar sua página" onclick="document.write(fonte.value);">
+    	<!-- Botão para excluir todo o código do textarea -->
+    	<input type="button" value=" Excluir todo o código " onclick="
+    		if (confirm('Tem certeza que deseja excluir TODO o código no campo? Esta ação não pode ser desfeita.')) {
+    			document.querySelector('textarea[name=&quot;fonte&quot;]').value = '';
+    		}
+    	">
     </form>
 	</center>
 </body>
